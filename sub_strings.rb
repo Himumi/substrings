@@ -1,11 +1,8 @@
 def sub_strings(string, dictionary)
   hash = {}
-  string = string.downcase.split
-  string.each do |word|
+  string.downcase.split.each do |word|
     dictionary.each do |item|
-      if word.include?(item)
-        hash[item] = hash.key?(item) ? hash[item] + 1 : 1
-      end
+        hash[item] = hash.key?(item) ? hash[item] + 1 : 1 if word.include?(item)
     end
   end
   hash
